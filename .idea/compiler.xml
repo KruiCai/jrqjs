@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="qjs-common" />
+        <module name="qjs-entity" />
+        <module name="qjs-mapper" />
+        <module name="qjs-resful" />
+        <module name="qjs-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jrqjs" target="1.6" />
+      <module name="qjs-common" target="1.6" />
+      <module name="qjs-entity" target="1.6" />
+      <module name="qjs-mapper" target="1.6" />
+      <module name="qjs-resful" target="1.8" />
+      <module name="qjs-service" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

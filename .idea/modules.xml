@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jrqjs.iml" filepath="$PROJECT_DIR$/jrqjs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qjs-common/qjs-common.iml" filepath="$PROJECT_DIR$/qjs-common/qjs-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qjs-entity/qjs-entity.iml" filepath="$PROJECT_DIR$/qjs-entity/qjs-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qjs-mapper/qjs-mapper.iml" filepath="$PROJECT_DIR$/qjs-mapper/qjs-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qjs-resful/qjs-resful.iml" filepath="$PROJECT_DIR$/qjs-resful/qjs-resful.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qjs-service/qjs-service.iml" filepath="$PROJECT_DIR$/qjs-service/qjs-service.iml" />
+    </modules>
+  </component>
+</project>
