@@ -20,6 +20,7 @@
             <artifactId>qjs-mapper</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--- test 提交-->
     </dependencies>
 
 </project>
