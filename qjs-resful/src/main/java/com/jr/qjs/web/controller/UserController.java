@@ -2,6 +2,7 @@ package com.jr.qjs.web.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.plugins.Page;
+import com.jr.qjs.common.bean.AbstractBean;
 import com.jr.qjs.entity.User;
 import com.jr.qjs.service.UserService;
 import io.swagger.annotations.Api;
@@ -30,10 +31,11 @@ public class UserController {
     /**
      * 查询用户
      */
-    @GetMapping("/{id}.auth")
+    @GetMapping("/{id}")
     @ApiOperation(value = "新聞詳情", httpMethod = "GET", notes = "新聞詳情")
     public AbstractBean newsContent(@PathVariable Integer id){
         userService.selectById(id);
+        return null;
 
     }
 
