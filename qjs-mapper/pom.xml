@@ -11,9 +11,14 @@
     <artifactId>qjs-mapper</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.jr</groupId>
+            <groupId>${project.groupId}</groupId>
             <artifactId>qjs-entity</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>qjs-common</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>
