@@ -25,5 +25,6 @@
             <artifactId>qjs-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--- test 提交-->
     </dependencies>
 </project>
