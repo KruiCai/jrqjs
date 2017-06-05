@@ -20,27 +20,27 @@ import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 public class MpGenerator {
-	
+    private static final String  projectBasePath="D:\\mystudy\\mybatiesplus\\projectstest\\jrqjs";
 	public static void main(String[] args) {
 		AutoGenerator mpg = new AutoGenerator();
-		
 		// 全局配置
         GlobalConfig gc = new GlobalConfig();
-        gc.setOutputDir("D://");
+        gc.setOutputDir("D://codetest");//
         gc.setFileOverride(true);
         gc.setActiveRecord(true);
         gc.setEnableCache(false);// XML 二级缓存
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(false);// XML columList
-
+        gc.setAuthor("CaiRui");
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
          gc.setMapperName("%sMapper");
          gc.setXmlName("%sMapper");
-         gc.setServiceName("MP%sService");
-         gc.setServiceImplName("%sServiceImpl");
+        /* gc.setServiceName("%sService");
+         gc.setServiceImplName("%sServiceImpl");*/
+        gc.setServiceName("I%sService");//没有service接口
+        gc.setServiceImplName("%sService");
          gc.setControllerName("%sController");
         mpg.setGlobalConfig(gc);
-
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
         dsc.setDbType(DbType.MYSQL);
@@ -55,7 +55,7 @@ public class MpGenerator {
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUsername("root");
         dsc.setPassword("krui12345");
-        dsc.setUrl("jdbc:mysql://localhost:3306/mystudy?useUnicode=true&characterEncoding=utf8&useSSL=false");
+        dsc.setUrl("jdbc:mysql://localhost:3306/payacctdb_test?useUnicode=true&characterEncoding=utf8&useSSL=false");
         mpg.setDataSource(dsc);
 
         // 策略配置
@@ -63,7 +63,8 @@ public class MpGenerator {
     // strategy.setCapitalMode(true);// 全局大写命名 ORACLE 注意
     //    strategy.setTablePrefix(new String[] {"lhc_"});// 此处可以修改为您的表前缀
         strategy.setNaming(NamingStrategy.underline_to_camel);// 表名生成策略
-        strategy.setInclude(new String[] {"user"}); // 需要生成的表
+        String[] tables={"account","partbill_record"};// 需要生成的表
+        strategy.setInclude(tables);
         // strategy.setExclude(new String[]{"test"}); // 排除生成的表
         // 自定义实体父类
         // strategy.setSuperEntityClass("com.baomidou.demo.TestEntity");
@@ -87,10 +88,18 @@ public class MpGenerator {
 
         // 包配置
         PackageConfig pc = new PackageConfig();
-        pc.setParent("com.jrerdangjia");
-        pc.setModuleName("etc3");
+       /* pc.setParent("com.jr");
+        pc.setModuleName("qjs");*/
+        pc.setParent(null);
+        pc.setModuleName(null);
+        String basePath=".src.main.java.com.jr.qjs.";
+        pc.setEntity("qjs-entity.src.main.java.com.jr.qjs.entity");
+        pc.setController("qjs-restful.src.main.java.com.jr.qjs.web.controller");
+        pc.setMapper("qjs-mapper.src.main.java.com.jr.qjs.mapper");
+        pc.setXml("qjs-mapper.src.main.resources.mapper");
+        pc.setService("qjs-service.src.main.java.com.jr.qjs.service");
+        pc.setServiceImpl("qjs-service.src.main.java.com.jr.qjs.service.impl");
         mpg.setPackageInfo(pc);
-
         // 注入自定义配置，可以在 VM 中使用 cfg.abc 【可无】
         InjectionConfig cfg = new InjectionConfig() {
             @Override
