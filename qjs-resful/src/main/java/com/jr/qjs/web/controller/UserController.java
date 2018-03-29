@@ -29,14 +29,13 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 查询用户
+     * 查询用户 我他们就呵呵了
      */
     @GetMapping("/{id}")
     @ApiOperation(value = "新聞詳情", httpMethod = "GET", notes = "新聞詳情")
     public AbstractBean newsContent(@PathVariable Integer id){
         userService.selectById(id);
         return null;
-
     }
 
     /**
@@ -55,6 +54,17 @@ public class UserController {
         result.put("result", userService.insert(user));
         return result;
     }
+
+    /**
+     * 查询用户 git 测试
+     */
+    @GetMapping("/{id}")
+    @ApiOperation(value = "新聞詳情", httpMethod = "GET", notes = "新聞詳情")
+    public AbstractBean newsContentTest(@PathVariable Integer id){
+        userService.selectById(id);
+        return null;
+    }
+
 
 
 }
